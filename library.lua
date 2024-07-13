@@ -2912,6 +2912,7 @@ function library:Init(key)
             
             selectorLabel.Name = "selectorLabel"
             selectorLabel.Active = false
+            selectorLabel.Enabled = false
             selectorLabel.Parent = selectorFrame
             selectorLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
             selectorLabel.BackgroundTransparency = 1.000
