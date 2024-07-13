@@ -3177,6 +3177,277 @@ function library:Init(key)
             return SelectorFunctions
         end
         --
+        function Components:NewSelectorNoLabel(default, list, callback)
+            default = default or ". . ."
+            list = list or {}
+            callback = callback or function() end
+
+            local SelectorNoLabelFrame = Instance.new("Frame")
+            local SelectorNoLabelFrameLayout = Instance.new("UIListLayout")
+            local SelectorNoLabel = Instance.new("TextButton")
+            local SelectorNoLabelCorner = Instance.new("UICorner")
+            local SelectorNoLabelLayout = Instance.new("UIListLayout")
+            local SelectorNoLabelPadding = Instance.new("UIPadding")
+            local SelectorNoLabelTwo = Instance.new("Frame")
+            local SelectorNoLabelText = Instance.new("TextLabel")
+            local textBoxValuesPadding = Instance.new("UIPadding")
+            local Frame = Instance.new("Frame")
+            local SelectorNoLabelTwoLayout = Instance.new("UIListLayout")
+            local SelectorNoLabelTwoGradient = Instance.new("UIGradient")
+            local SelectorNoLabelTwoCorner = Instance.new("UICorner")
+            local SelectorNoLabelPadding_2 = Instance.new("UIPadding")
+            local SelectorNoLabelContainer = Instance.new("Frame")
+            local SelectorNoLabelTwoLayout_2 = Instance.new("UIListLayout")
+            
+            SelectorNoLabelFrame.Name = "SelectorNoLabelFrame"
+            SelectorNoLabelFrame.Parent = page
+            SelectorNoLabelFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+            SelectorNoLabelFrame.BackgroundTransparency = 1.000
+            SelectorNoLabelFrame.ClipsDescendants = true
+            SelectorNoLabelFrame.Position = UDim2.new(0.00499999989, 0, 0.0895953774, 0)
+            SelectorNoLabelFrame.Size = UDim2.new(0, 396, 0, 46)
+            
+            SelectorNoLabelFrameLayout.Name = "SelectorNoLabelFrameLayout"
+            SelectorNoLabelFrameLayout.Parent = SelectorNoLabelFrame
+            SelectorNoLabelFrameLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+            SelectorNoLabelFrameLayout.SortOrder = Enum.SortOrder.LayoutOrder
+            
+            SelectorNoLabel.Name = "SelectorNoLabel"
+            SelectorNoLabel.Parent = SelectorNoLabelFrame
+            SelectorNoLabel.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+            SelectorNoLabel.ClipsDescendants = true
+            SelectorNoLabel.Position = UDim2.new(0, 0, 0.0926640928, 0)
+            SelectorNoLabel.Size = UDim2.new(0, 396, 0, 21)
+            SelectorNoLabel.AutoButtonColor = false
+            SelectorNoLabel.Font = Enum.Font.SourceSans
+            SelectorNoLabel.Text = ""
+            SelectorNoLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+            SelectorNoLabel.TextSize = 14.000
+            
+            SelectorNoLabelCorner.CornerRadius = UDim.new(0, 2)
+            SelectorNoLabelCorner.Name = "SelectorNoLabelCorner"
+            SelectorNoLabelCorner.Parent = SelectorNoLabel
+            
+            SelectorNoLabelLayout.Name = "SelectorNoLabelLayout"
+            SelectorNoLabelLayout.Parent = SelectorNoLabel
+            SelectorNoLabelLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+            SelectorNoLabelLayout.SortOrder = Enum.SortOrder.LayoutOrder
+            
+            SelectorNoLabelPadding.Name = "SelectorNoLabelPadding"
+            SelectorNoLabelPadding.Parent = SelectorNoLabel
+            SelectorNoLabelPadding.PaddingTop = UDim.new(0, 1)
+            
+            SelectorNoLabelTwo.Name = "SelectorNoLabelTwo"
+            SelectorNoLabelTwo.Parent = SelectorNoLabel
+            SelectorNoLabelTwo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+            SelectorNoLabelTwo.ClipsDescendants = true
+            SelectorNoLabelTwo.Position = UDim2.new(0.00252525252, 0, 0, 0)
+            SelectorNoLabelTwo.Size = UDim2.new(0, 394, 0, 20)
+            
+            SelectorNoLabelText.Name = "SelectorNoLabelText"
+            SelectorNoLabelText.Parent = SelectorNoLabelTwo
+            SelectorNoLabelText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+            SelectorNoLabelText.BackgroundTransparency = 1.000
+            SelectorNoLabelText.Size = UDim2.new(0, 394, 0, 20)
+            SelectorNoLabelText.Font = Enum.Font.Code
+            SelectorNoLabelText.LineHeight = 1.150
+            SelectorNoLabelText.TextColor3 = Color3.fromRGB(160, 160, 160)
+            SelectorNoLabelText.TextSize = 14.000
+            SelectorNoLabelText.TextXAlignment = Enum.TextXAlignment.Left
+            SelectorNoLabelText.Text = default
+            
+            textBoxValuesPadding.Name = "textBoxValuesPadding"
+            textBoxValuesPadding.Parent = SelectorNoLabelText
+            textBoxValuesPadding.PaddingBottom = UDim.new(0, 6)
+            textBoxValuesPadding.PaddingLeft = UDim.new(0, 6)
+            textBoxValuesPadding.PaddingRight = UDim.new(0, 6)
+            textBoxValuesPadding.PaddingTop = UDim.new(0, 6)
+            
+            Frame.Parent = SelectorNoLabelText
+            Frame.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+            Frame.BorderSizePixel = 0
+            Frame.Position = UDim2.new(-0.008, 0, 1.78, 0)
+            Frame.Size = UDim2.new(0, 388, 0, 1)
+            
+            SelectorNoLabelTwoLayout.Name = "SelectorNoLabelTwoLayout"
+            SelectorNoLabelTwoLayout.Parent = SelectorNoLabelTwo
+            SelectorNoLabelTwoLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+            SelectorNoLabelTwoLayout.SortOrder = Enum.SortOrder.LayoutOrder
+            
+            SelectorNoLabelTwoGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(34, 34, 34)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(28, 28, 28))}
+            SelectorNoLabelTwoGradient.Rotation = 90
+            SelectorNoLabelTwoGradient.Name = "SelectorNoLabelTwoGradient"
+            SelectorNoLabelTwoGradient.Parent = SelectorNoLabelTwo
+            
+            SelectorNoLabelTwoCorner.CornerRadius = UDim.new(0, 2)
+            SelectorNoLabelTwoCorner.Name = "SelectorNoLabelTwoCorner"
+            SelectorNoLabelTwoCorner.Parent = SelectorNoLabelTwo
+            
+            SelectorNoLabelPadding_2.Name = "SelectorNoLabelPadding"
+            SelectorNoLabelPadding_2.Parent = SelectorNoLabelTwo
+            SelectorNoLabelPadding_2.PaddingTop = UDim.new(0, 1)
+            
+            SelectorNoLabelContainer.Name = "SelectorNoLabelContainer"
+            SelectorNoLabelContainer.Parent = SelectorNoLabelTwo
+            SelectorNoLabelContainer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+            SelectorNoLabelContainer.BackgroundTransparency = 1.000
+            SelectorNoLabelContainer.Size = UDim2.new(0, 394, 0, 20)
+        
+            SelectorNoLabelTwoLayout_2.Name = "SelectorNoLabelTwoLayout"
+            SelectorNoLabelTwoLayout_2.Parent = SelectorNoLabelContainer
+            SelectorNoLabelTwoLayout_2.HorizontalAlignment = Enum.HorizontalAlignment.Center
+            SelectorNoLabelTwoLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+
+            CreateTween("SelectorNoLabel", 0.08)
+
+            SelectorNoLabelContainer.ChildAdded:Connect(UpdatePageSize)
+            SelectorNoLabelContainer.ChildAdded:Connect(UpdatePageSize)
+
+            UpdatePageSize()
+
+            local Amount = #list
+            local Val = (Amount * 20)
+            function checkSizes()
+                Amount = #list
+                Val = (Amount * 20) + 20
+            end
+            for i,v in next, list do
+                local optionButton = Instance.new("TextButton")
+
+                optionButton.Name = "optionButton"
+                optionButton.Parent = SelectorNoLabelContainer
+                optionButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+                optionButton.BackgroundTransparency = 1.000
+                optionButton.Size = UDim2.new(0, 394, 0, 20)
+                optionButton.AutoButtonColor = false
+                optionButton.Font = Enum.Font.Code
+                optionButton.Text = v
+                optionButton.TextColor3 = Color3.fromRGB(160, 160, 160)
+                optionButton.TextSize = 14.000
+                if optionButton.Text == default then
+                    optionButton.TextColor3 = Color3.fromRGB(159, 115, 255)
+                    callback(SelectorNoLabelText.Text)
+                end
+
+                optionButton.MouseButton1Click:Connect(function()
+                    for z,x in next, SelectorNoLabelContainer:GetChildren() do
+                        if x:IsA("TextButton") then
+                            TweenService:Create(x, TweenTable["SelectorNoLabel"], {TextColor3 = Color3.fromRGB(160, 160, 160)}):Play()
+                        end
+                    end
+                    TweenService:Create(optionButton, TweenTable["SelectorNoLabel"], {TextColor3 = Color3.fromRGB(159, 115, 255)}):Play()
+                    SelectorNoLabelText.Text = optionButton.Text
+                    callback(optionButton.Text)
+                end)
+
+                SelectorNoLabelContainer.Size = UDim2.new(0, 394, 0, Val)
+                SelectorNoLabelTwo.Size = UDim2.new(0, 394, 0, Val)
+                SelectorNoLabel.Size = UDim2.new(0, 396, 0, Val + 2)
+                SelectorNoLabelFrame.Size = UDim2.new(0, 396, 0, Val + 26)
+
+                UpdatePageSize()
+                checkSizes()
+            end
+
+            UpdatePageSize()
+            local SelectorNoLabelFunctions = {}
+            local AddAmount = 0
+            function SelectorNoLabelFunctions:AddOption(new, callback_f)
+                new = new or "option"
+                list[new] = new
+
+                local optionButton = Instance.new("TextButton")
+
+                AddAmount = AddAmount + 20
+
+                optionButton.Name = "optionButton"
+                optionButton.Parent = SelectorNoLabelContainer
+                optionButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+                optionButton.BackgroundTransparency = 1.000
+                optionButton.Size = UDim2.new(0, 394, 0, 20)
+                optionButton.AutoButtonColor = false
+                optionButton.Font = Enum.Font.Code
+                optionButton.Text = new
+                optionButton.TextColor3 = Color3.fromRGB(140, 140, 140)
+                optionButton.TextSize = 14.000
+                if optionButton.Text == default then
+                    optionButton.TextColor3 = Color3.fromRGB(159, 115, 255)
+                    callback(SelectorNoLabelText.Text)
+                end
+
+                optionButton.MouseButton1Click:Connect(function()
+                    for z,x in next, SelectorNoLabelContainer:GetChildren() do
+                        if x:IsA("TextButton") then
+                            TweenService:Create(x, TweenTable["SelectorNoLabel"], {TextColor3 = Color3.fromRGB(140, 140, 140)}):Play()
+                        end
+                    end
+                    TweenService:Create(optionButton, TweenTable["SelectorNoLabel"], {TextColor3 = Color3.fromRGB(159, 115, 255)}):Play()
+                    SelectorNoLabelText.Text = optionButton.Text
+                    callback(optionButton.Text)
+                end)
+
+                checkSizes()
+                SelectorNoLabelContainer.Size = UDim2.new(0, 394, 0, Val + AddAmount)
+                SelectorNoLabelTwo.Size = UDim2.new(0, 394, 0, Val + AddAmount)
+                SelectorNoLabel.Size = UDim2.new(0, 396, 0, (Val + AddAmount) + 2)
+                SelectorNoLabelFrame.Size = UDim2.new(0, 396, 0, (Val + AddAmount) + 26)
+
+                UpdatePageSize()
+                checkSizes()
+                return SelectorNoLabelFunctions
+            end
+            --
+            local RemoveAmount = 0
+            function SelectorNoLabelFunctions:RemoveOption(option)
+                list[option] = nil
+
+                RemoveAmount = RemoveAmount + 20
+                AddAmount = AddAmount - 20
+
+                for i,v in pairs(SelectorNoLabelContainer:GetDescendants()) do
+                    if v:IsA("TextButton") then
+                        if v.Text == option then
+                            v:Destroy()
+                            SelectorNoLabelContainer.Size = UDim2.new(0, 394, 0, Val - RemoveAmount)
+                            SelectorNoLabelTwo.Size = UDim2.new(0, 394, 0, Val - RemoveAmount)
+                            SelectorNoLabel.Size = UDim2.new(0, 396, 0, (Val - RemoveAmount) + 2)
+                            SelectorNoLabelFrame.Size = UDim2.new(0, 396, 0, (Val + 6) - 20)
+                        end
+                    end
+                end
+
+                if SelectorNoLabelText.Text == option then
+                    SelectorNoLabelText.Text = ". . ."
+                end
+
+                UpdatePageSize()
+                checkSizes()
+                return SelectorNoLabelFunctions
+            end
+            --
+            function SelectorNoLabelFunctions:SetFunction(new)
+                new = new or callback
+                callback = new
+                return SelectorNoLabelFunctions
+            end
+            --
+            function SelectorNoLabelFunctions:Hide()
+                SelectorNoLabelFrame.Visible = false
+                return SelectorNoLabelFunctions
+            end
+            --
+            function SelectorNoLabelFunctions:Show()
+                SelectorNoLabelFrame.Visible = true
+                return SelectorNoLabelFunctions
+            end
+            --
+            function SelectorNoLabelFunctions:Remove()
+                SelectorNoLabelFrame:Destroy()
+                return SelectorNoLabelFunctions
+            end
+            return SelectorNoLabelFunctions
+        end
+        --
         function Components:NewSlider(text, suffix, compare, compareSign, values, callback)
             text = text or "slider"
             suffix = suffix or ""
