@@ -1460,9 +1460,8 @@ function library:Init(key)
         end
         --
 
-        function Components:NewSection(text, alignment)
+        function Components:NewSection(text)
             text = text or "section"
-            alignment = alignment or "left"
 
             local sectionFrame = Instance.new("Frame")
             local sectionLayout = Instance.new("UIListLayout")
@@ -1514,15 +1513,6 @@ function library:Init(key)
             rightBar.BorderSizePixel = 0
             rightBar.Position = UDim2.new(0.308080822, 0, 0.479166657, 0)
             rightBar.Size = UDim2.new(0, 403, 0, 1)
-
-            if alignment:lower():find("le") then
-                label.TextXAlignment = Enum.TextXAlignment.Left
-            elseif alignment:lower():find("cent") then
-                label.TextXAlignment = Enum.TextXAlignment.Center
-            elseif alignment:lower():find("ri") then
-                label.TextXAlignment = Enum.TextXAlignment.Right
-            end
-
             UpdatePageSize()
 
             local NewSectionSize = TextService:GetTextSize(sectionLabel.Text, sectionLabel.TextSize, sectionLabel.Font, Vector2.new(math.huge,math.huge))
