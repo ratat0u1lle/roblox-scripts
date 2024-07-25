@@ -2908,14 +2908,14 @@ function library:Init(key)
             selectorFrame.BackgroundTransparency = 1.000
             selectorFrame.ClipsDescendants = true
             selectorFrame.Position = UDim2.new(0.00499999989, 0, 0.0895953774, 0)
-            selectorFrame.Size = UDim2.new(0, 396, 0, 46)
+            selectorFrame.Size = UDim2.new(0, 396, 0, 42)
 
             
             selectorLabel.Name = "selectorLabel"
             selectorLabel.Parent = selectorFrame
             selectorLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
             selectorLabel.BackgroundTransparency = 1.000
-            selectorLabel.Size = UDim2.new(0, 396, 0, 8)
+            selectorLabel.Size = UDim2.new(0, 396, 0, 16)
             selectorLabel.Font = Enum.Font.Code
             selectorLabel.Text = text
             selectorLabel.TextColor3 = Color3.fromRGB(190, 190, 190)
