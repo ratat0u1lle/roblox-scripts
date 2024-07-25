@@ -2913,7 +2913,7 @@ function library:Init(key)
             selectorLabel.Name = "selectorLabel"
             selectorLabel.Parent = selectorFrame
             selectorLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-            selectorLabel.BackgroundTransparency = 0.000 -- was 1.000
+            selectorLabel.BackgroundTransparency = 1.000
             selectorLabel.Size = UDim2.new(0.5, 0, 0.5, 0)
             selectorLabel.Font = Enum.Font.Code
             selectorLabel.Text = text
