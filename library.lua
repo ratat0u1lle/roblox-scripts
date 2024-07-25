@@ -1,6 +1,6 @@
 --UI lib made by bungie#0001
 -- / Locals
-print("updated1")
+print("updated2")
 local Workspace = game:GetService("Workspace")
 local Player = game:GetService("Players").LocalPlayer
 local Mouse = Player:GetMouse()
@@ -2915,7 +2915,7 @@ function library:Init(key)
             selectorLabel.Parent = selectorFrame
             selectorLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
             selectorLabel.BackgroundTransparency = 1.000
-            selectorLabel.Size = UDim2.new(0, 396, 0, 20)
+            selectorLabel.Size = UDim2.new(0, 396, 0, 22)
             selectorLabel.Font = Enum.Font.Code
             selectorLabel.Text = text
             selectorLabel.TextColor3 = Color3.fromRGB(190, 190, 190)
