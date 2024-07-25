@@ -2907,14 +2907,14 @@ function library:Init(key)
             selectorFrame.BackgroundTransparency = 1.000
             selectorFrame.ClipsDescendants = true
             selectorFrame.Position = UDim2.new(0.00499999989, 0, 0.0895953774, 0)
-            selectorFrame.Size = UDim2.new(0, 396, 0, 38)
+            selectorFrame.Size = UDim2.new(0, 396, 0, 46) -- was 46
 
             
             selectorLabel.Name = "selectorLabel"
             selectorLabel.Parent = selectorFrame
             selectorLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-            selectorLabel.BackgroundTransparency = 1.000
-            selectorLabel.Size = UDim2.new(0, 0, 0, 0)
+            selectorLabel.BackgroundTransparency = 0.000 -- was 1.000
+            selectorLabel.Size = UDim2.new(0.5, 0, 0.5, 0)
             selectorLabel.Font = Enum.Font.Code
             selectorLabel.Text = text
             selectorLabel.TextColor3 = Color3.fromRGB(190, 190, 190)
@@ -2922,6 +2922,7 @@ function library:Init(key)
             selectorLabel.TextWrapped = true
             selectorLabel.TextXAlignment = Enum.TextXAlignment.Left
             selectorLabel.RichText = true
+            selectorLabel.AnchorPoint = Vector2.new(0.5, 0.5)
             
             selectorLabelPadding.Name = "selectorLabelPadding"
             selectorLabelPadding.Parent = selectorLabel
