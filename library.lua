@@ -1,6 +1,6 @@
 --UI lib made by bungie#0001
---UI lib modified and fixed by paleczarnuchow
 -- / Locals
+print("updated")
 local Workspace = game:GetService("Workspace")
 local Player = game:GetService("Players").LocalPlayer
 local Mouse = Player:GetMouse()
@@ -2877,7 +2877,7 @@ function library:Init(key)
             end
         end
         --
-        function Components:NewSelector(text, default, list, callback)
+        function Components:NewSelectorNL(text, default, list, callback)
             text = text or "selector"
             default = default or ". . ."
             list = list or {}
@@ -2915,13 +2915,13 @@ function library:Init(key)
             selectorLabel.Parent = selectorFrame
             selectorLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
             selectorLabel.BackgroundTransparency = 1.000
-            selectorLabel.Size = UDim2.new(0, 396, 0, 24)
+            selectorLabel.Size = UDim2.new(0, 396, 0, 8)
             selectorLabel.Font = Enum.Font.Code
             selectorLabel.Text = text
             selectorLabel.TextColor3 = Color3.fromRGB(190, 190, 190)
             selectorLabel.TextSize = 14.000
             selectorLabel.TextWrapped = true
-            selectorLabel.TextXAlignment = Enum.TextXAlignment.Left
+            selectorLabel.TextXAlignment = Enum.TextXAlignment.Center
             selectorLabel.RichText = true
             
             selectorLabelPadding.Name = "selectorLabelPadding"
@@ -3177,8 +3177,9 @@ function library:Init(key)
             end
             return SelectorFunctions
         end
+        
         --
-        function Components:NewSelectorCF(text, default, list, callback)
+        function Components:NewSelector(text, default, list, callback)
             text = text or "selector"
             default = default or ". . ."
             list = list or {}
@@ -3216,7 +3217,7 @@ function library:Init(key)
             selectorLabel.Parent = selectorFrame
             selectorLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
             selectorLabel.BackgroundTransparency = 1.000
-            selectorLabel.Size = UDim2.new(0.5, 0, 0.5, 0)
+            selectorLabel.Size = UDim2.new(0, 396, 0, 24)
             selectorLabel.Font = Enum.Font.Code
             selectorLabel.Text = text
             selectorLabel.TextColor3 = Color3.fromRGB(190, 190, 190)
@@ -3224,7 +3225,6 @@ function library:Init(key)
             selectorLabel.TextWrapped = true
             selectorLabel.TextXAlignment = Enum.TextXAlignment.Left
             selectorLabel.RichText = true
-            selectorLabel.AnchorPoint = Vector2.new(0.5, 0.5)
             
             selectorLabelPadding.Name = "selectorLabelPadding"
             selectorLabelPadding.Parent = selectorLabel
