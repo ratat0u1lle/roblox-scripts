@@ -2907,7 +2907,7 @@ function library:Init(key)
             selectorFrame.BackgroundTransparency = 1.000
             selectorFrame.ClipsDescendants = true
             selectorFrame.Position = UDim2.new(0.00499999989, 0, 0.0895953774, 0)
-            selectorFrame.Size = UDim2.new(0, 396, 0, 42)
+            selectorFrame.Size = UDim2.new(0, 396, 0, 38)
 
             
             selectorLabel.Name = "selectorLabel"
